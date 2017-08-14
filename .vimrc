@@ -1,16 +1,20 @@
 syntax on
+filetype plugin on
+
 packadd minpac
 call minpac#init()
 
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('tpope/vim-fugitive')
+call minpac#add('isRuslan/vim-es6')
 call minpac#add('rking/ag.vim')
 call minpac#add('Chun-Yang/vim-action-ag')
 call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('scrooloose/nerdcommenter')
 call minpac#add('scrooloose/nerdtree')
 call minpac#add('janko-m/vim-test')
+call minpac#add('joukevandermaas/vim-ember-hbs')
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 set background=dark
@@ -39,7 +43,7 @@ nmap * <Plug>AgActionWord
 vmap * <Plug>AgActionVisual
 let g:portkey_autostart = 1
 let g:portkey_adaptive_mappings = 1
-" map <Leader>rt :!ctags --tag-relative --extra=+f -Rf.git/tags --exclude=.git,pkg --languages=-javascript,sql<CR><CR>
+map <Leader>rt :!ctags --tag-relative --extra=+f -Rf.git/tags --exclude=.git,pkg --languages=-javascript,sql<CR><CR>
 " set tags+=.git/tags
 set runtimepath^=~/.vim/pack/minpac/start/ag.vim
 " test shortcuts
@@ -49,6 +53,8 @@ nmap <silent> <leader>tt :TestLast<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
+" toggle nerdtree
+map <C-n> :NERDTreeToggle<CR>
 " Allow us to use Ctrl-s and Ctrl-q as keybinds
 silent !stty -ixon
 " Restore default behaviour when leaving Vim.
