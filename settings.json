@@ -1,0 +1,66 @@
+// this is the config for vs code that I use.
+// here is a list of extensions I currently have installed:
+// atom one dark theme
+// beautify
+// c/c++
+// CTags Support
+// Debugger for Chrome
+// Docker
+// vim mode
+// EsLint
+// Git Blame
+// Go to spec
+// Live share
+// Rails Run Specs
+// Ruby
+// Visual Studio Intellicode
+// elixir
+// python
+// vs code icons
+// vscode ruby ctags
+
+{
+  "editor.minimap.enabled": false,
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.activityBar.visible": false,
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["k", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "w", "h"],
+      "commands": ["workbench.action.navigateLeft"]
+    },
+    {
+      "before": ["<leader>", "w", "l"],
+      "commands": ["workbench.action.navigateEditorGroups"]
+    },
+    {
+      "before": ["<leader>", "T"],
+      "commands": ["extension.runFileSpecs"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["extension.runSpecLine"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["extension.runLastSpec"]
+    }
+  ],
+  "workbench.colorTheme": "Atom One Dark",
+  // "ruby.specCommand": "spring rspec",
+}
+
+
