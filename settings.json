@@ -20,11 +20,23 @@
 // vscode ruby ctags
 
 {
+  "editor.fontFamily": "Fira Code",
+  // "editor.fontFamily": "Hack",
+  // "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "500",
+  "terminal.integrated.shell.osx": "zsh",
+  "files.trimTrailingWhitespace": true,
+  "vscode_custom_css.imports": ["file:///Users/korytegman/workspace/vs_code_config/custom.css"],
+  "vscode_custom_css.policy": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background" : "#a217ff",
+    "statusBar.foreground" : "#fdfdfd",
+  },
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
-  "workbench.iconTheme": "vscode-icons",
   "workbench.activityBar.visible": false,
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
@@ -59,8 +71,21 @@
       "commands": ["extension.runLastSpec"]
     }
   ],
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // "ctags": {
+  //   "fileName": ".tags"
+  // }
+  // "bustagem.cmd.rip": "ripper-tags -f TAGS -R --force --extra=q"
+  // "ctags": {
+  //   "executePath": "~/.rbenv/shims/ripper-tags",
+  //   "options": "--tag-file=.tags --recursive --force --exclude=/assets/ --exclude=.bundle --exclude=.git/ --exclude=coverage/ --exclude=.arcanist-extensions/ --exclude=log/ --exclude=tmp/ --exclude=bin/",
+  //   "fileName": ".tags"
+  // }
   // "ruby.specCommand": "spring rspec",
-}
+  // "code-runner.runInTerminal": true,
 
+}
 
