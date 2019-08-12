@@ -1,0 +1,14 @@
+/* .mac, .windows {
+  font-family: Desired-Font, FiraCode-Retina, Roboto, monospace;
+} */
+/* 
+.monaco-workbench, .monaco-workbench .part > .content {}
+
+.monaco-workbench.no-workspace>.part.statusbar,
+.monaco-workbench > .part.statusbar {
+  background: rgb(21,21,21);
+} */
+.monaco-workbench > .part.statusbar>.statusbar-item{
+  font-size: 16px;
+  font-weight: bold;
+}
