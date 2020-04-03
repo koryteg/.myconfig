@@ -10,7 +10,6 @@ export ZSH="/Users/korytegman/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -69,12 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  # rails
-  # ruby
-  web-search
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,8 +85,24 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+# source ~/.zprofile
+
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/gettext/lib"
 export CPPFLAGS="-I/usr/local/opt/gettext/include"
@@ -116,11 +126,8 @@ export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 alias ctags="`brew --prefix`/bin/ctags"
 
-# this is a thing that makes the ruby GC heap larger to
-# start so it doenst spend a shit ton of time resizing the heap
-export RUBY_GC_HEAP_INIT_SLOT=1727219
-
-export GOPATH=$HOME/go_workspace
-export GOROOT=/usr/local/opt/go/libexec
+export GOPATH="${HOME}/go"
+export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+# export PATH="$PATH:${GOPATH}/bin"
