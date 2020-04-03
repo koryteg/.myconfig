@@ -20,72 +20,108 @@
 // vscode ruby ctags
 
 {
-  "editor.fontFamily": "Fira Code",
-  // "editor.fontFamily": "Hack",
-  // "editor.fontFamily": "FiraCode-Retina",
-  "editor.fontLigatures": true,
-  "editor.fontWeight": "500",
-  "terminal.integrated.shell.osx": "zsh",
-  "files.trimTrailingWhitespace": true,
-  "vscode_custom_css.imports": ["file:///Users/korytegman/workspace/vs_code_config/custom.css"],
-  "vscode_custom_css.policy": true,
-  "workbench.colorCustomizations": {
-    "statusBar.background" : "#a217ff",
-    "statusBar.foreground" : "#fdfdfd",
-  },
-  "editor.minimap.enabled": false,
-  "editor.rulers": [80],
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "workbench.activityBar.visible": false,
-  "vim.leader": "<space>",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": { "editor.formatOnSave": true },
+    "[javascriptreact]": { "editor.formatOnSave": true },
+    "[typescript]": { "editor.formatOnSave": true },
+    "[typescriptreact]": { "editor.formatOnSave": true },
+    "[ruby]": { "editor.formatOnSave": true },
+    // "[html]": { "editor.formatOnSave": true },
+    // "editor.fontFamily": "Fira Code",
+    // "editor.fontFamily": "Hack",
+    "editor.fontFamily": "FiraCode-Retina",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "500",
+    "terminal.integrated.shell.linux": "zsh",
+    "emmet.includeLanguages": {"erb": "html"},
+    "terminal.integrated.shell.osx": "zsh",
+    "files.trimTrailingWhitespace": true,
+    "vscode_custom_css.imports": ["file:///Users/korytegman/workspace/vs-code-css/synthwave84.css"],
+    "vscode_custom_css.policy": true,
+    "workbench.colorCustomizations": {
+      "statusBar.background": "#a217ff",
+      "statusBar.foreground": "#fdfdfd"
     },
-    {
-      "before": ["k", "j"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "w", "h"],
-      "commands": ["workbench.action.navigateLeft"]
+    "editor.minimap.enabled": false,
+    "editor.rulers": [80, 100],
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "workbench.activityBar.visible": true,
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "k"],
+        "after": ["<Esc>"]
+      },
+      {
+        "before": ["k", "j"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "w", "h"],
+        "commands": ["workbench.action.navigateLeft"]
+      },
+      {
+        "before": ["<leader>", "w", "l"],
+        "commands": ["workbench.action.navigateEditorGroups"]
+      },
+      {
+        "before": ["<leader>", "T"],
+        "commands": ["extension.runFileSpecs"]
+      },
+      {
+        "before": ["<leader>", "t"],
+        "commands": ["extension.runSpecLine"]
+      },
+      {
+        "before": ["<leader>", "l"],
+        "commands": ["extension.runLastSpec"]
+      }
+    ],
+    "ruby.specCommand": "rails test",
+    "ruby.specPattern": "test",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vsicons.presets.tsOfficial": true,
+    // "ctags": {
+    //   "fileName": ".tags"
+    // }
+    // "bustagem.cmd.rip": "ripper-tags -f TAGS -R --force --extra=q"
+    // "ctags": {
+    //   "executePath": "~/.rbenv/shims/ripper-tags",
+    //   "options": "--tag-file=.tags --recursive --force --exclude=/assets/ --exclude=.bundle --exclude=.git/ --exclude=coverage/ --exclude=.arcanist-extensions/ --exclude=log/ --exclude=tmp/ --exclude=bin/",
+    //   "fileName": ".tags"
+    // }
+    // "code-runner.runInTerminal": true,
+    "ruby.useBundler": false, //run non-lint commands with bundle exec
+    "ruby.useLanguageServer": true, // use the internal language server (see below)
+    "ruby.lint": {
+      "standard": true,
+      "rubocop": {
+        "useBundler": true // enable rubocop via bundler
+      },
+      "reek": {
+        "useBundler": true // enable reek via bundler
+      }
     },
-    {
-      "before": ["<leader>", "w", "l"],
-      "commands": ["workbench.action.navigateEditorGroups"]
+    "ruby.format": "rubocop", // use rubocop for formatting
+    "solargraph.useBundler": false,
+    "editor.lineNumbers": "relative",
+    "window.zoomLevel": 0,
+    "terminal.integrated.rendererType": "dom",
+    "oneDarkPro.vivid": true,
+    "workbench.colorTheme": "Atom One Dark",
+    "zenMode.fullScreen": false,
+    "files.associations": {
+      "*.html.erb": "erb",
+      "*.erb": "erb"
     },
-    {
-      "before": ["<leader>", "T"],
-      "commands": ["extension.runFileSpecs"]
-    },
-    {
-      "before": ["<leader>", "t"],
-      "commands": ["extension.runSpecLine"]
-    },
-    {
-      "before": ["<leader>", "l"],
-      "commands": ["extension.runLastSpec"]
-    }
-  ],
-  "workbench.colorTheme": "One Dark Pro",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  // "ctags": {
-  //   "fileName": ".tags"
-  // }
-  // "bustagem.cmd.rip": "ripper-tags -f TAGS -R --force --extra=q"
-  // "ctags": {
-  //   "executePath": "~/.rbenv/shims/ripper-tags",
-  //   "options": "--tag-file=.tags --recursive --force --exclude=/assets/ --exclude=.bundle --exclude=.git/ --exclude=coverage/ --exclude=.arcanist-extensions/ --exclude=log/ --exclude=tmp/ --exclude=bin/",
-  //   "fileName": ".tags"
-  // }
-  // "ruby.specCommand": "spring rspec",
-  // "code-runner.runInTerminal": true,
-
-}
-
+    "liveshare.presence": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "go.formatTool": "goimports",
+    "go.autocompleteUnimportedPackages": true,
+    "[go]": { "editor.formatOnSave": false },
+  }
